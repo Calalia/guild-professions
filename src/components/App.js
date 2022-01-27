@@ -6,6 +6,7 @@ import CharacterList from "./CharacterList";
 import ReagentList from "./ReagentList";
 import RecipeList from "./RecipeList";
 import RecipePage from "./RecipePage";
+import NinniPage from "./Ninnipage"
 
 function App(props) {
   return (
@@ -15,6 +16,7 @@ function App(props) {
         <Route path={"/reagents"} component={ReagentList} />
         <Route path={"/recipes"} component={RecipeList} />
         <Route path={"/recipes/:id"} component={RecipePage} />
+        <Route path={"/ninni"} component={NinniPage} />
         <Route path={"/"} component={IndexPage} exact />
       </Switch>
     </div>
