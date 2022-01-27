@@ -3,16 +3,16 @@ import { connect } from "react-redux";
 import { fetchReagentsAC } from "../ducks/reagents";
 import { updateUIMap } from "../ducks/ui";
 import DataBaseElementList from "./DatabaseElementList";
-import AddNewReagentPage from "./AddNewReagentPage";
+import AddNewReagentForm from "./AddNewReagentForm";
 
-function IndexPage(props) {
+function ReagentList(props) {
   const { fetchReagentsAC, reagents, uiMap, updateUIMap } = props;
   React.useEffect(() => {
     fetchReagentsAC();
   }, []);
   return (
     <div>
-      {uiMap.get("addNewReagentOpen") ? <AddNewReagentPage /> : ""}
+      {uiMap.get("addNewReagentOpen") ? <AddNewReagentForm /> : ""}
       <DataBaseElementList
         addFunction={React.useMemo(
           () => (event) => {
@@ -31,4 +31,4 @@ export default connect(
     uiMap: state.ui.get("uiMap"),
   }),
   { fetchReagentsAC, updateUIMap }
-)(IndexPage);
+)(ReagentList);

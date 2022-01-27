@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { postReagentAC } from "../ducks/reagents";
 import { updateUIMap } from "../ducks/ui";
 
-function AddNewReagentPage(props) {
+function AddNewReagentForm(props) {
   const { postReagentAC, uiMap, updateUIMap } = props;
   React.useEffect(() => {
     updateUIMap("newReagentFormName", "");
@@ -17,6 +17,7 @@ function AddNewReagentPage(props) {
             name: uiMap.get("newReagentFormName"),
             price: uiMap.get("newReagentFormPrice"),
           });
+          updateUIMap("addNewReagentOpen", false);
         }}
       >
         <input
@@ -42,4 +43,4 @@ function AddNewReagentPage(props) {
 export default connect((state) => ({ uiMap: state.ui.get("uiMap") }), {
   postReagentAC,
   updateUIMap,
-})(AddNewReagentPage);
+})(AddNewReagentForm);

@@ -1,6 +1,6 @@
 import { Map, List } from "immutable";
 
-const defaultState = Map({ recipes: new List() });
+const defaultState = Map({ recipes: [] });
 
 export const fetchRecipesAC = () => ({ type: "FETCH_RECIPES" });
 export const saveRecipesAC = (data) => ({
@@ -13,7 +13,7 @@ export default function reducer(state = defaultState, action) {
 
   switch (type) {
     case "SAVE_RECIPES":
-      return state.update("recipes", (old) => List(payload));
+      return state.update("recipes", (old) => payload);
     default:
       return state;
   }

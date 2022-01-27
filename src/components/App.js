@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import IndexPage from "./IndexPage";
 import CharacterList from "./CharacterList";
 import ReagentList from "./ReagentList";
+import RecipeList from "./RecipeList";
 import RecipePage from "./RecipePage";
 
 function App(props) {
@@ -12,8 +13,9 @@ function App(props) {
       <Switch>
         <Route path={"/characters"} component={CharacterList} />
         <Route path={"/reagents"} component={ReagentList} />
+        <Route path={"/recipes"} component={RecipeList} />
         <Route path={"/recipes/:id"} component={RecipePage} />
-        <Route path={"/*"} component={IndexPage} />
+        <Route path={"/"} component={IndexPage} exact />
       </Switch>
     </div>
   );

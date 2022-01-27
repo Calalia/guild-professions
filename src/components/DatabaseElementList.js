@@ -2,6 +2,7 @@ import React from "react";
 
 function DataBaseElementList(props) {
   const { listItems, addFunction } = props;
+  console.log(listItems);
   return (
     <div>
       <table>
@@ -27,7 +28,11 @@ function DataBaseElementList(props) {
                 .filter(([key, value]) => key !== "_id")
                 .map(([key, value]) => (
                   <td key={key}>
-                    <span>{value}</span>
+                    {typeof value === "object" ? (
+                      <pre>{JSON.stringify(value, null, 2)}</pre>
+                    ) : (
+                      <span>{value}</span>
+                    )}
                   </td>
                 ))}
             </tr>
