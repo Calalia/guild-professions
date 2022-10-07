@@ -15,7 +15,6 @@ function AddNewReagentForm(props) {
           event.preventDefault();
           postReagentAC({
             name: uiMap.get("newReagentFormName"),
-            price: uiMap.get("newReagentFormPrice"),
           });
           updateUIMap("addNewReagentOpen", false);
         }}

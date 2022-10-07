@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Dragon Isles Alchemy: Refreshing Healing Potion",
+    "difficulty": 100,
+    "input": [
+      { "name": "Rousing Frost", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 12 }
+    ],
+    "output": [{ "name": "Refreshing Healing Potion", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Aerated Mana Potion",
+    "difficulty": 100,
+    "input": [
+      { "name": "Rousing Air", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 15 }
+    ],
+    "output": [{ "name": "Aerated Mana Potion", "quantity": 5 }]
+  }
+]
