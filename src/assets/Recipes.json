@@ -1,6 +1,225 @@
 [
   {
+    "name": "Dragon Isles Alchemy: Advanced Phial Experimentation",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 325,
+    "input": [
+      { "name": "Artisan's Mettle", "quantity": 5 },
+      { "name": "Dragon's Alchemical Solution", "quantity": 2 },
+      { "name": "Omnium Draconis", "quantity": 1 }
+    ],
+    "output": []
+  },
+  {
+    "name": "Dragon Isles Alchemy: Advanced Potion Experimentation",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 325,
+    "input": [
+      { "name": "Artisan's Mettle", "quantity": 5 },
+      { "name": "Dragon's Alchemical Solution", "quantity": 2 },
+      { "name": "Omnium Draconis", "quantity": 1 }
+    ],
+    "output": []
+  },
+  {
+    "name": "Dragon Isles Alchemy: Basic Phial Experimentation",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 325,
+    "input": [
+      { "name": "Artisan's Mettle", "quantity": 5 },
+      { "name": "Dragon's Alchemical Solution", "quantity": 2 },
+      { "name": "Omnium Draconis", "quantity": 1 }
+    ],
+    "output": []
+  },
+  {
+    "name": "Dragon Isles Alchemy: Basic Potion Experimentation",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 325,
+    "input": [
+      { "name": "Artisan's Mettle", "quantity": 5 },
+      { "name": "Dragon's Alchemical Solution", "quantity": 2 },
+      { "name": "Omnium Draconis", "quantity": 1 }
+    ],
+    "output": []
+  },
+  {
+    "name": "Dragon Isles Alchemy: Primal Convergent",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 275,
+    "input": [
+      { "name": "Awakened Earth", "quantity": 1 },
+      { "name": "Awakened Fire", "quantity": 1 },
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Awakened Frost", "quantity": 1 },
+      { "name": "Awakened Order", "quantity": 1 }
+    ],
+    "output": [{ "name": "Primal Convergent", "quantity": 2 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Omnium Draconis",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 325,
+    "input": [
+      { "name": "Writhebark", "quantity": 1 },
+      { "name": "Saxifrage", "quantity": 1 },
+      { "name": "Hochenblume", "quantity": 1 },
+      { "name": "Bubble Poppy", "quantity": 1 }
+    ],
+    "output": [{ "name": "Omnium Draconis", "quantity": 1 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Residual Neural Channeling Agent",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 400,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Awakened Earth", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Saxifrage", "quantity": 10 }
+    ],
+    "output": [{ "name": "Residual Neural Channeling Agent", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Bottled Putrescence",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Awakened Decay", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 30 }
+    ],
+    "output": [{ "name": "Bottled Putrescence", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of Gusts",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 250,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Saxifrage", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 20 }
+    ],
+    "output": [{ "name": "Potion of Gusts", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of Shocking Disclosure",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 250,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Awakened Earth", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 10 }
+    ],
+    "output": [{ "name": "Potion of Shocking Disclosure", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of the Hushed Zephyr",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 250,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 20 },
+      { "name": "Saxifrage", "quantity": 8 }
+    ],
+    "output": [{ "name": "Potion of the Hushed Zephyr", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Aerated Mana Potion",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 150,
+    "input": [
+      { "name": "Rousing Air", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 15 }
+    ],
+    "output": [{ "name": "Aerated Mana Potion", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of Frozen Focus",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 400,
+    "input": [
+      { "name": "Awakened Frost", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Hochenblume", "quantity": 20 },
+      { "name": "Saxifrage", "quantity": 8 }
+    ],
+    "output": [{ "name": "Potion of Frozen Focus", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Delicate Suspension of Spores",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
+    "input": [
+      { "name": "Awakened Frost", "quantity": 1 },
+      { "name": "Awakened Decay", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Bubble Poppy", "quantity": 10 }
+    ],
+    "output": [{ "name": "Delicate Suspension of Spores", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of Chilled Clarity",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
+    "input": [
+      { "name": "Awakened Frost", "quantity": 1 },
+      { "name": "Awakened Decay", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Bubble Poppy", "quantity": 10 }
+    ],
+    "output": [{ "name": "Potion of Chilled Clarity", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of Withering Vitality",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
+    "input": [
+      { "name": "Awakened Frost", "quantity": 1 },
+      { "name": "Awakened Decay", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Writhebark", "quantity": 10 }
+    ],
+    "output": [{ "name": "Potion of Withering Vitality", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion of Frozen Fatality",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 250,
+    "input": [
+      { "name": "Awakened Frost", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 10 },
+      { "name": "Writhebark", "quantity": 8 },
+      { "name": "Hochenblume", "quantity": 20 }
+    ],
+    "output": [{ "name": "Potion of Frozen Fatality", "quantity": 5 }]
+  },
+  {
     "name": "Dragon Isles Alchemy: Refreshing Healing Potion",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
     "difficulty": 100,
     "input": [
       { "name": "Rousing Frost", "quantity": 1 },
@@ -10,13 +229,135 @@
     "output": [{ "name": "Refreshing Healing Potion", "quantity": 5 }]
   },
   {
-    "name": "Dragon Isles Alchemy: Aerated Mana Potion",
-    "difficulty": 100,
+    "name": "Dragon Isles Alchemy: Potion Cauldron of Ultimate Power",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
     "input": [
-      { "name": "Rousing Air", "quantity": 1 },
-      { "name": "Draconic Vial", "quantity": 5 },
-      { "name": "Hochenblume", "quantity": 15 }
+      { "name": "Elemental Potion of Power", "quantity": 150 },
+      { "name": "Omnium Draconis", "quantity": 20 }
     ],
-    "output": [{ "name": "Aerated Mana Potion", "quantity": 5 }]
+    "output": [{ "name": "Potion Cauldron of Ultimate Power", "quantity": 1 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Potion Cauldron of Power",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 425,
+    "input": [
+      { "name": "Elemental Potion of Power", "quantity": 100 },
+      { "name": "Omnium Draconis", "quantity": 10 }
+    ],
+    "output": [{ "name": "Potion Cauldron of Power", "quantity": 1 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Cauldron of the Pooka",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 300,
+    "input": [
+      { "name": "Omnium Draconis", "quantity": 1 },
+      { "name": "Primal Convergent", "quantity": 2 }
+    ],
+    "output": [{ "name": "Cauldron of the Pooka", "quantity": 2 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Elemental Potion of Ultimate Power",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
+    "input": [
+      { "name": "Primal Chaos", "quantity": 20 },
+      { "name": "Awakened Order", "quantity": 2 },
+      { "name": "Elemental Potion of Power", "quantity": 30 }
+    ],
+    "output": [{ "name": "Elemental Potion of Ultimate Power", "quantity": 20 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Phial of Elemental Chaos",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 450,
+    "input": [
+      { "name": "Draconic Vial", "quantity": 2 },
+      { "name": "Primal Convergent", "quantity": 1 },
+      { "name": "Omnium Draconis", "quantity": 2 }
+    ],
+    "output": [{ "name": "Phial of Elemental Chaos", "quantity": 2 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Elemental Potion of Power",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 425,
+    "input": [
+      { "name": "Draconic Vial", "quantity": 5 },
+      { "name": "Omnium Draconis", "quantity": 2 },
+      { "name": "Primal Convergent", "quantity": 1 }
+    ],
+    "output": [{ "name": "Elemental Potion of Power", "quantity": 5 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Phial of Still Air",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 400,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 2 },
+      { "name": "Bubble Poppy", "quantity": 10 },
+      { "name": "Saxifrage", "quantity": 5 }
+    ],
+    "output": [{ "name": "Phial of Still Air", "quantity": 2 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Phial of Charged Isolation",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 400,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Awakened Earth", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 2 },
+      { "name": "Saxifrage", "quantity": 9 }
+    ],
+    "output": [{ "name": "Phial of Charged Isolation", "quantity": 2 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Phial of Static Empowerment",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 400,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Awakened Earth", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 2 },
+      { "name": "Bubble Poppy", "quantity": 5 }
+    ],
+    "output": [{ "name": "Phial of Static Empowerment", "quantity": 2 }]
+  },
+  {
+    "name": "Dragon Isles Alchemy: Phial of Eye in the Storm",
+    "dlc": "Dragonflight",
+    "profession": "Alchemy",
+    "difficulty": 400,
+    "input": [
+      { "name": "Awakened Air", "quantity": 1 },
+      { "name": "Draconic Vial", "quantity": 2 },
+      { "name": "Bubble Poppy", "quantity": 5 },
+      { "name": "Saxifrage", "quantity": 10 }
+    ],
+    "output": [{ "name": "Phial of Eye in the Storm", "quantity": 2 }]
+  },
+  {
+    "name": "Shadowlands Alchemy: Potion of Spectral Agility",
+    "dlc": "Shadowlands",
+    "profession": "Alchemy",
+    "difficulty": 0,
+    "input": [
+      { "name": "Rune Etched Vial", "quantity": 1 },
+      { "name": "Widowbloom", "quantity": 5 }
+    ],
+    "output": [{ "name": "Potion of Spectral Agility", "quantity": 1 }]
   }
 ]

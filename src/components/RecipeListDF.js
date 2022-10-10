@@ -1,37 +1,24 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchRecipesAC } from "../ducks/recipes";
+import items from "../assets/Items.json";
+import recipes from "../assets/Recipes.json";
 import { updateUIMap } from "../ducks/ui";
 import DataBaseElementList from "./DatabaseElementList";
 import AddNewReagentPage from "./AddNewReagentForm";
+
+//inspiration amount floor(difficulty/2.85)
+//silver skill floor(difficulty/1.67)
 
 function RecipeListDF(props) {
   const { fetchRecipesAC, uiMap, updateUIMap } = props;
   React.useEffect(() => {
     fetchRecipesAC();
-    updateUIMap(
-      "dfItems",
-      '[{"name":"bloom","qualities":3,"price":4.5},{"name":"potion","qualities":3,"price":20.0},{"name":"flask","qualities":3,"price":1.0}]'
-    );
-    updateUIMap(
-      "dfRecipes",
-      '[{"name":"makePotion1","difficulty":100,"input":[{"name":"bloom","quantity":2},{"name":"flask","quantity":5}],"output":[{"name":"potion","quantity":5}]}]'
-    );
   }, []);
 
-  var recipes;
-  var items;
-  try {
-    recipes = JSON.parse(uiMap.get("dfRecipes"));
-    items = JSON.parse(uiMap.get("dfItems"));
-    console.log(items);
-  } catch {
-    recipes = false;
-    items = false;
-  }
   return (
     <div>
-      <label>items</label>
+      {/* <label>items</label>
       <textarea
         value={uiMap.get("dfItems")}
         onChange={(event) => updateUIMap("dfItems", event.target.value)}
@@ -42,7 +29,7 @@ function RecipeListDF(props) {
         value={uiMap.get("dfRecipes")}
         onChange={(event) => updateUIMap("dfRecipes", event.target.value)}
       ></textarea>
-      {uiMap.get("addNewRecipeOpen") ? <p>Add new Recipe</p> : ""}
+      {uiMap.get("addNewRecipeOpen") ? <p>Add new Recipe</p> : ""} */}
       {/* <DataBaseElementList
         addFunction={React.useMemo(
           () => (event) => {
@@ -56,13 +43,13 @@ function RecipeListDF(props) {
         recipes.map((el) => {
           var cost = el.input.reduce((pre, cur) => {
             var item = items.find((e1) => e1.name === cur.name);
-            console.log(item);
-            return item.price * cur.quantity + pre;
+            if (!item) return 0;
+            return item.prices[0] * cur.quantity + pre;
           }, 0);
           var pay = el.output.reduce((pre, cur) => {
             var item = items.find((e1) => e1.name === cur.name);
-            console.log(item);
-            return item.price * cur.quantity + pre;
+            if (!item) return 0;
+            return item.prices[0] * cur.quantity + pre;
           }, 0);
           return (
             <div

@@ -1,10 +1,11 @@
 import React from "react";
 
 function DataBaseElementList(props) {
-  const { listItems, addFunction } = props;
+  const { listItems, addFunction, filter } = props;
   console.log(listItems);
   return (
     <div>
+      {addFunction ? <button onClick={addFunction}>Add new</button> : ""}
       <table>
         <thead>
           <tr>
@@ -22,24 +23,31 @@ function DataBaseElementList(props) {
           </tr>
         </thead>
         <tbody>
-          {listItems.map((el) => (
-            <tr className="databaseElementRow" key={el._id}>
-              {Object.entries(el)
-                .filter(([key, value]) => key !== "_id")
-                .map(([key, value]) => (
-                  <td key={key}>
-                    {typeof value === "object" ? (
-                      <pre>{JSON.stringify(value, null, 2)}</pre>
-                    ) : (
-                      <span>{value}</span>
-                    )}
-                  </td>
-                ))}
-            </tr>
-          ))}
+          {listItems
+            .filter((el) => {
+              if (!filter) return true;
+              return Object.entries(filter).reduce((pre, [key, value]) => {
+                if (value !== null && el[key] !== value) return false;
+                return pre;
+              }, true);
+            })
+            .map((el) => (
+              <tr className="databaseElementRow" key={el._id}>
+                {Object.entries(el)
+                  .filter(([key, value]) => key !== "_id")
+                  .map(([key, value]) => (
+                    <td key={key}>
+                      {typeof value === "object" ? (
+                        <pre>{JSON.stringify(value, null, 2)}</pre>
+                      ) : (
+                        <span>{value}</span>
+                      )}
+                    </td>
+                  ))}
+              </tr>
+            ))}
         </tbody>
       </table>
-      {addFunction ? <button onClick={addFunction}>Add new</button> : ""}
     </div>
   );
 }

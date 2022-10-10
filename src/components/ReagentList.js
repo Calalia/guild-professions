@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchReagentsAC } from "../ducks/reagents";
 import { updateUIMap } from "../ducks/ui";
+import items from "../assets/Items.json";
 import DataBaseElementList from "./DatabaseElementList";
 import AddNewReagentForm from "./AddNewReagentForm";
 

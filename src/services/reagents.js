@@ -2,16 +2,14 @@ import config from "../config/config";
 import axios from "axios";
 
 function getAllReagents() {
-  return axios.get(config.BACKEND_URL + "/server/reagents/").then((res) => {
+  return axios.get(config.BACKEND_URL + "/server/items/").then((res) => {
     return res.data;
   });
 }
 function postReagent(data) {
-  return axios
-    .post(config.BACKEND_URL + "/server/reagents/", data)
-    .then((res) => {
-      return res.data;
-    });
+  return axios.post(config.BACKEND_URL + "/server/items/", data).then((res) => {
+    return res.data;
+  });
 }
 
 export default { getAllReagents, postReagent };

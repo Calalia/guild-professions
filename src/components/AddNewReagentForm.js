@@ -15,10 +15,12 @@ function AddNewReagentForm(props) {
           event.preventDefault();
           postReagentAC({
             name: uiMap.get("newReagentFormName"),
+            dlc: uiMap.get("newReagentFormDlc"),
           });
           updateUIMap("addNewReagentOpen", false);
         }}
       >
+        <label>name</label>
         <input
           title="name"
           value={uiMap.get("newReagentFormName") || ""}
@@ -26,12 +28,23 @@ function AddNewReagentForm(props) {
             updateUIMap("newReagentFormName", event.target.value)
           }
         ></input>
+        <br />
+        <label>dlc</label>
+        <input
+          title="dlc"
+          value={uiMap.get("newReagentFormDlc") || ""}
+          onChange={(event) =>
+            updateUIMap("newReagentFormDlc", event.target.value)
+          }
+        ></input>
+        <br />
+        <label>qualities</label>
         <input
           type="number"
-          title="price"
-          value={uiMap.get("newReagentFormPrice") || ""}
+          title="dlc"
+          value={uiMap.get("newReagentFormQualities") || 0}
           onChange={(event) =>
-            updateUIMap("newReagentFormPrice", event.target.value)
+            updateUIMap("newReagentFormQualities", event.target.value)
           }
         ></input>
         <input type="submit"></input>
