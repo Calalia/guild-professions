@@ -4,6 +4,7 @@ import { fetchRecipesAC } from "../ducks/recipes";
 import items from "../assets/Items.json";
 import recipes from "../assets/Recipes.json";
 import { updateUIMap } from "../ducks/ui";
+import Headerbar from "./Headerbar";
 import DataBaseElementList from "./DatabaseElementList";
 import AddNewReagentPage from "./AddNewReagentForm";
 
@@ -17,7 +18,7 @@ function RecipeListDF(props) {
   }, []);
 
   return (
-    <div>
+    <Headerbar>
       {/* <label>items</label>
       <textarea
         value={uiMap.get("dfItems")}
@@ -67,7 +68,7 @@ function RecipeListDF(props) {
             </div>
           );
         })) || <pre>Invalid json</pre>}
-    </div>
+    </Headerbar>
   );
 }
 export default connect(

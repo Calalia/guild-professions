@@ -5,6 +5,7 @@ import { updateUIMap } from "../ducks/ui";
 import items from "../assets/Items.json";
 import DataBaseElementList from "./DatabaseElementList";
 import AddNewReagentForm from "./AddNewReagentForm";
+import Headerbar from "./Headerbar";
 
 function ReagentList(props) {
   const { fetchReagentsAC, reagents, uiMap, updateUIMap } = props;
@@ -12,7 +13,7 @@ function ReagentList(props) {
     fetchReagentsAC();
   }, []);
   return (
-    <div>
+    <Headerbar>
       {uiMap.get("addNewReagentOpen") ? <AddNewReagentForm /> : ""}
       <DataBaseElementList
         addFunction={React.useMemo(
@@ -23,7 +24,7 @@ function ReagentList(props) {
         )}
         listItems={reagents}
       />
-    </div>
+    </Headerbar>
   );
 }
 export default connect(

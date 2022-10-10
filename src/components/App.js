@@ -8,6 +8,7 @@ import RecipeList from "./RecipeList";
 import RecipeListDF from "./RecipeListDF";
 import RecipePage from "./RecipePage";
 import NinniPage from "./Ninnipage";
+import SetPricesPage from "./SetPricesPage";
 
 function App(props) {
   return (
@@ -18,6 +19,7 @@ function App(props) {
         <Route path={"/recipes"} component={RecipeListDF} />
         <Route path={"/recipes/:id"} component={RecipePage} />
         <Route path={"/ninni"} component={NinniPage} />
+        <Route path={"/prices"} component={SetPricesPage} />
         <Route path={"/"} component={IndexPage} exact />
       </Switch>
     </div>
