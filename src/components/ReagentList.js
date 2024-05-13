@@ -1,21 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchReagentsAC } from "../ducks/reagents";
+import { fetchReagentsAC, postReagentAC } from "../ducks/reagents";
 import { updateUIMap } from "../ducks/ui";
-import items from "../assets/Items.json";
+//import items from "../assets/Items.json";
 import DataBaseElementList from "./DatabaseElementList";
 import DataBaseElementEditForm from "./DatabaseElementEditForm";
-import AddNewReagentForm from "./AddNewReagentForm";
 import Headerbar from "./Headerbar";
 
 function ReagentList(props) {
-  const { fetchReagentsAC, reagents, uiMap, updateUIMap } = props;
+  const { fetchReagentsAC, postReagentAC, reagents, uiMap, updateUIMap } =
+    props;
   React.useEffect(() => {
     fetchReagentsAC();
   }, []);
   var addSubmitFunction = React.useMemo(
     () => (element) => {
-      console.log(element);
+      postReagentAC(element);
       updateUIMap("addNewReagentOpen", false);
     },
     []
@@ -23,6 +23,19 @@ function ReagentList(props) {
   var addCancelFunction = React.useMemo(
     () => () => {
       updateUIMap("addNewReagentOpen", false);
+    },
+    []
+  );
+  var editSubmitFunction = React.useMemo(
+    () => (element) => {
+      patchCharacterAC(element);
+      updateUIMap("editedCharacter", null);
+    },
+    []
+  );
+  var editCancelFunction = React.useMemo(
+    () => () => {
+      updateUIMap("editedCharacter", null);
     },
     []
   );
@@ -54,5 +67,5 @@ export default connect(
     reagents: state.reagents.get("reagents"),
     uiMap: state.ui.get("uiMap"),
   }),
-  { fetchReagentsAC, updateUIMap }
+  { fetchReagentsAC, postReagentAC, updateUIMap }
 )(ReagentList);
