@@ -13,5 +13,23 @@ function postCharacter(data) {
       return res.data;
     });
 }
-
-export default { getAllCharacters, postCharacter };
+function deleteCharacter(data) {
+  return axios
+    .delete(config.BACKEND_URL + "/server/characters/" + data.id)
+    .then((res) => {
+      return res.data;
+    });
+}
+function patchCharacter(data) {
+  return axios
+    .patch(config.BACKEND_URL + "/server/characters/" + data.id, data)
+    .then((res) => {
+      return res.data;
+    });
+}
+export default {
+  getAllCharacters,
+  postCharacter,
+  deleteCharacter,
+  patchCharacter,
+};

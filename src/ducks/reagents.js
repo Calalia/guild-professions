@@ -11,6 +11,10 @@ export const postReagentAC = (data) => ({
   type: "POST_REAGENT",
   payload: data,
 });
+export const putReagentAC = (data) => ({
+  type: "PUT_REAGENT",
+  payload: data,
+});
 
 export default function reducer(state = defaultState, action) {
   const { type, payload } = action;

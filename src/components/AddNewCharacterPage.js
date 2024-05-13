@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { postCharacterAC } from "../ducks/characters";
+import { postCharacterAC, deleteCharacterAC } from "../ducks/characters";
 import { updateUIMap } from "../ducks/ui";
 
 function AddNewCharacterPage(props) {
@@ -13,7 +13,7 @@ function AddNewCharacterPage(props) {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          postCharacterAC({ name: uiMap.get("newCharacterFormName") });
+          postCharacterAC({ charname: uiMap.get("newCharacterFormName") });
         }}
       >
         <input
@@ -23,11 +23,13 @@ function AddNewCharacterPage(props) {
             updateUIMap("newCharacterFormName", event.target.value)
           }
         ></input>
+        <button type="Submit">add</button>
       </form>
     </div>
   );
 }
 export default connect((state) => ({ uiMap: state.ui.get("uiMap") }), {
   postCharacterAC,
+  deleteCharacterAC,
   updateUIMap,
 })(AddNewCharacterPage);
