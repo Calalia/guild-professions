@@ -9,6 +9,13 @@ function Headerbar(props) {
         <h1>Header</h1>
         <button
           onClick={(e) => {
+            history.push("/characters");
+          }}
+        >
+          Characters
+        </button>
+        <button
+          onClick={(e) => {
             history.push("/reagents");
           }}
         >

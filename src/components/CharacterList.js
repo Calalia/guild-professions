@@ -4,17 +4,20 @@ import {
   deleteCharacterAC,
   fetchCharactersAC,
   patchCharacterAC,
+  postCharacterAC,
 } from "../ducks/characters";
 import { updateUIMap } from "../ducks/ui";
 import DataBaseElementList from "./DatabaseElementList";
 import DataBaseElementEditForm from "./DatabaseElementEditForm";
 import AddNewCharacterPage from "./AddNewCharacterPage";
+import Headerbar from "./Headerbar";
 
 function CharacterPage(props) {
   const {
     fetchCharactersAC,
     deleteCharacterAC,
     patchCharacterAC,
+    postCharacterAC,
     characters,
     uiMap,
     updateUIMap,
@@ -22,6 +25,19 @@ function CharacterPage(props) {
   React.useEffect(() => {
     fetchCharactersAC();
   }, []);
+  var addSubmitFunction = React.useMemo(
+    () => (element) => {
+      postCharacterAC(element);
+      updateUIMap("addNewCharacterOpen", false);
+    },
+    []
+  );
+  var addCancelFunction = React.useMemo(
+    () => () => {
+      updateUIMap("addNewCharacterOpen", false);
+    },
+    []
+  );
   var submitFunction = React.useMemo(
     () => (element) => {
       patchCharacterAC(element);
@@ -36,17 +52,36 @@ function CharacterPage(props) {
     []
   );
   return (
-    <div>
+    <Headerbar>
       {uiMap.get("editedCharacter") ? (
         <DataBaseElementEditForm
           editedElement={uiMap.get("editedCharacter")}
           submitFunction={submitFunction}
           cancelFunction={cancelFunction}
-        ></DataBaseElementEditForm>
+        />
       ) : (
         ""
       )}
-      {uiMap.get("addNewCharacterOpen") ? <AddNewCharacterPage /> : ""}
+      {uiMap.get("addNewCharacterOpen") ? (
+        <div>
+          <h3>Adding new Character</h3>
+          <DataBaseElementEditForm
+            editedElement={{
+              charname: "",
+              chargroup: null,
+              profession1: null,
+              profession2: null,
+              p1_level: null,
+              p2_level: null,
+              c_level: null,
+            }}
+            submitFunction={addSubmitFunction}
+            cancelFunction={addCancelFunction}
+          />
+        </div>
+      ) : (
+        ""
+      )}
       <DataBaseElementList
         addFunction={React.useMemo(
           () => (event) => {
@@ -67,7 +102,7 @@ function CharacterPage(props) {
           deleteCharacterAC(char);
         }}
       />
-    </div>
+    </Headerbar>
   );
 }
 export default connect(
@@ -75,5 +110,11 @@ export default connect(
     characters: state.characters.get("characters"),
     uiMap: state.ui.get("uiMap"),
   }),
-  { fetchCharactersAC, deleteCharacterAC, patchCharacterAC, updateUIMap }
+  {
+    fetchCharactersAC,
+    deleteCharacterAC,
+    postCharacterAC,
+    patchCharacterAC,
+    updateUIMap,
+  }
 )(CharacterPage);
