@@ -13,7 +13,7 @@ function DataBaseElementEditForm(props) {
   } = props;
   React.useEffect(() => {
     updateUIMap(valuesKey, JSON.parse(JSON.stringify(editedElement)));
-  }, [editedElement]);
+  }, [JSON.stringify(editedElement)]);
 
   return (
     <div>

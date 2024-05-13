@@ -4,6 +4,7 @@ import { fetchReagentsAC } from "../ducks/reagents";
 import { updateUIMap } from "../ducks/ui";
 import items from "../assets/Items.json";
 import DataBaseElementList from "./DatabaseElementList";
+import DataBaseElementEditForm from "./DatabaseElementEditForm";
 import AddNewReagentForm from "./AddNewReagentForm";
 import Headerbar from "./Headerbar";
 
@@ -12,9 +13,30 @@ function ReagentList(props) {
   React.useEffect(() => {
     fetchReagentsAC();
   }, []);
+  var addSubmitFunction = React.useMemo(
+    () => (element) => {
+      console.log(element);
+      updateUIMap("addNewReagentOpen", false);
+    },
+    []
+  );
+  var addCancelFunction = React.useMemo(
+    () => () => {
+      updateUIMap("addNewReagentOpen", false);
+    },
+    []
+  );
   return (
     <Headerbar>
-      {uiMap.get("addNewReagentOpen") ? <AddNewReagentForm /> : ""}
+      {uiMap.get("addNewReagentOpen") ? (
+        <DataBaseElementEditForm
+          editedElement={{ name: "", tags: "" }}
+          submitFunction={addSubmitFunction}
+          cancelFunction={addCancelFunction}
+        />
+      ) : (
+        ""
+      )}
       <DataBaseElementList
         addFunction={React.useMemo(
           () => (event) => {

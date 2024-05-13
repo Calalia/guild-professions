@@ -14,10 +14,8 @@ function AddNewReagentForm(props) {
         onSubmit={(event) => {
           event.preventDefault();
           postReagentAC({
-            name: uiMap.get("newReagentFormName") || "",
-            dlc: uiMap.get("newReagentFormDlc") || "Not Set",
-            qualities: uiMap.get("newReagentFormQualities") || 1,
-            prices: [],
+            item: uiMap.get("newReagentFormName") || "",
+            tags: uiMap.get("newReagentFormDlc") || "",
           });
           updateUIMap("addNewReagentOpen", false);
         }}

@@ -11,10 +11,19 @@ function postReagent(data) {
     return res.data;
   });
 }
-function putReagent(data) {
-  return axios.put(config.BACKEND_URL + "/server/items/", data).then((res) => {
-    return res.data;
-  });
+function deleteReagent(data) {
+  return axios
+    .delete(config.BACKEND_URL + "/server/items/" + data.id)
+    .then((res) => {
+      return res.data;
+    });
+}
+function patchReagent(data) {
+  return axios
+    .patch(config.BACKEND_URL + "/server/items/" + data.id, data)
+    .then((res) => {
+      return res.data;
+    });
 }
 
-export default { getAllReagents, postReagent, putReagent };
+export default { getAllReagents, postReagent, patchReagent };
